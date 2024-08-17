@@ -33,4 +33,23 @@ you there:
 
 ```#!/bin/sh```
 
+### 3.7.1 Redirecting Input and Output
 
+#### Operators for Redirecting Input and Output
+
+![](./images/table3.2.png)
+
+### 3.8 Globbing, Brace Extension, and Handling File and Directory Names
+
+#### Globbing Characters
+
+![](./images/table3.3.png)
+
+### 3.8.3 Brace Extension
+
+In Bash, you can formulate enumerations separated by commas or ranges created via
+```..``` in curly brackets. Before the command gets executed, all possible combinations are
+created, so the expression specified in parentheses is “expanded.” Unlike globbing, however, the brace extension does not consider whether corresponding files already
+exist or not. The easiest way to understand the mechanism is by looking at some examples:
+
+![](./images/brace-extension-examples.png)
