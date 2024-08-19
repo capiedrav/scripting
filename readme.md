@@ -53,3 +53,32 @@ created, so the expression specified in parentheses is “expanded.” Unlike gl
 exist or not. The easiest way to understand the mechanism is by looking at some examples:
 
 ![](./images/brace-extension-examples.png)
+
+### 3.9.3 Performing Calculations in Bash
+
+Bash “thinks” in terms of character strings. Calculations or the analysis of mathematical expressions are only possible in a special context using ```let``` 
+or within double parentheses (see Table). All mathematical calculations use only integers as a matter of principle.
+
+![](./images/table3.5.png)
+![](./images/note1.png)
+
+The following lines contain some examples of mathematical expressions in Bash. In the process, some otherwise common rules have been softened. For example, within
+```((...))```, assignments also work with spaces before and after ```=```. (But not with ```let```!) In
+addition, you are permitted to omit the preceding ```$``` character when reading variables.
+
+![](./images/examples-of-math-in-bash.png)
+
+### 3.9.4 Arrays
+
+Besides simple variables, Bash also can deal with arrays. Ordinary arrays use integers as
+index. Note the ```${field(n)}``` syntax for accessing the *nth* element, which differs from
+many other programming languages.
+
+![](./images/examples-of-arrays-in-bash.png)
+
+### 3.9.5 Predefined Variables
+
+Bash scripts can access predefined variables (see Table). These variables can only be
+read, but not changed. The abbreviation *PID* stands for process ID (i.e., the internal process number).
+
+![](./images/table3.6.png)
